@@ -18,7 +18,7 @@ checkPassword = async (username, plaintextPassword) => {
    
     if (globalStore[username]) {
 
-        let result = await bcrypt.compart(plaintextPassword, globalStore[username])
+        let result = await bcrypt.compare(plaintextPassword, globalStore[username])
 
         if (result) {
             console.log(`\n⭐️ Welcome back, ${username}, you're a valid user! ⭐️\n`)
